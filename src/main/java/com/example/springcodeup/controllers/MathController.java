@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class MathController {
     @GetMapping("/Add/{num1}/and/{num2}")
     @ResponseBody
-    public String Add(@PathVariable int num1, int num2){
+    public String Add(@PathVariable int num1, @PathVariable int num2){
 return num1 +" plus "+ num2+ " equals" + (num1+num2);
     }
 }

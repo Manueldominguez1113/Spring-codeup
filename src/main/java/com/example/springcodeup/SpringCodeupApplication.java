@@ -1,4 +1,4 @@
-package com.example.springcodeup.controllers;
+package com.example.springcodeup;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

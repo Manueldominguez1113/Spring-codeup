@@ -1,6 +1,6 @@
-package com.example.springcodeup.controllers;
+package com.example.springcodeup;
 
-import com.example.springcodeup.controllers.SpringCodeupApplication;
+import com.example.springcodeup.SpringCodeupApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
