@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>my first spring page</title>
+    <meta charset="UTF-8" />
+    <title>Home</title>
 </head>
 <body>
-<h1> congratulations!</h1>
+<nav th:include=""></nav>
 
-this page means i got here. was pretty easy, huh!
+<h1>Hello, <span th:text="${name}">World</span>!</h1>
+
 </body>
 </html>
