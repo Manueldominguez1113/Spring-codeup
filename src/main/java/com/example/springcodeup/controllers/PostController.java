@@ -1,30 +1,38 @@
 package com.example.springcodeup.controllers;
 
 import com.example.springcodeup.Post;
+import com.example.springcodeup.PostRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
+
 @Controller
 public class PostController {
+    private final PostRepository postDao;
 
-    public ArrayList<Post> example(){
+    public PostController(PostRepository postDao) {
+        this.postDao = postDao;
+    }
+
+/*    public ArrayList<Post> example(){
         ArrayList<Post> ex = new ArrayList<>();
         Post one =new Post("hello!","First post");
         Post two = new Post("hi..", "second post");
         ex.add(one);
         ex.add(two);
         return ex;
-    }
+    }*/
 
     @GetMapping("/posts")
     public String posts(Model model){
-        model.addAttribute("Posts", example());
+        ArrayList<Post> allPosts = new ArrayList<>();
+                allPosts.add(new Post("looking for a home for dog", "dog, dont want to leave alone, looking for a good home"));
+                allPosts.add(new Post("cat", "trying to find a new cat. would love a kitten for our kids to grow up with"));
+//        ArrayList<Post> allPosts = (ArrayList<Post>) postDao.findAll();
+        model.addAttribute("Posts", allPosts);
         return "posts/index";
     }
 

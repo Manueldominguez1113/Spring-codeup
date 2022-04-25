@@ -1,12 +1,32 @@
 package com.example.springcodeup;
 
+import javax.persistence.*;
+
+@Entity
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    @Column(nullable = false, length = 100)
     private String title;
+    @Column(nullable = false, length = 100)
     private String body;
+
+    public Post(){}
 
     public Post(String title, String body){
         this.title = title;
         this.body = body;
+    }
+
+
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {
