@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a new post!</title>
+</head>
+<body>
+<form th:action="@{/posts/edit}" th:method="post" th:object="${Post}">
+    <input type="text" th:field="*{id}" id="id" hidden>
+    <!--<input type="text" th:field="*{owner}" id="owner" disabled>-->
+    <label for="title">Post title:
+        <input th:field="*{title}" id="title" type="text">
+    </label>
+
+    <label for="body">Post body:
+        <input th:field="*{body}" id="body" type="text">
+    </label>
+
+    <button type="submit">Save my post</button>
+
+</form>
+
+</body>
+</html>

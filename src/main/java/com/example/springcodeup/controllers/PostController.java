@@ -50,16 +50,32 @@ public class PostController {
 
     @GetMapping("/posts/create")
     public String startCreatePost(Model model) {
-        model.addAttribute("newPost",new Post());
+        model.addAttribute("Post",new Post());
         return "/posts/create";
     }
 
     @PostMapping("/posts/create")
-    public String createPost(@RequestParam(name = "title") String title, @RequestParam(name ="body") String body){
+    public String createPost(@ModelAttribute Post newpost){
 //        System.out.println("your title is "+title+" and the body was :"+ body);
         User user = userDao.getById(1L);
-        Post post =new Post(title,body);
+        Post post =new Post(newpost.getTitle(), newpost.getBody());
         post.setOwner(user);
+        postDao.save(post);
+
+        return "redirect:/posts";
+    }
+
+    @GetMapping("/posts/{id}/edit")
+    public String startEditPost(Model model, @PathVariable long id) {
+        model.addAttribute("Post",postDao.getById(id));
+        model.addAttribute("id", id);
+        return "/posts/edit";
+    }
+    @PostMapping("/posts/edit")
+    public String editPost(@ModelAttribute Post newpost){
+        Post post = postDao.getById(newpost.getId());
+        post.setTitle(newpost.getTitle());
+        post.setBody(newpost.getBody());
         postDao.save(post);
 
         return "redirect:/posts";
