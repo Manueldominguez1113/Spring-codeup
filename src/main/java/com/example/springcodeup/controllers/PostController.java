@@ -15,10 +15,12 @@ import java.util.ArrayList;
 public class PostController {
     private final PostRepository postDao;
     private final UserRepository userDao;
+    private final EmailService emailService;
 
-    public PostController(PostRepository postDao, UserRepository userDao) {
+    public PostController(PostRepository postDao, UserRepository userDao, EmailService emailService) {
         this.postDao = postDao;
         this.userDao = userDao;
+        this.emailService = emailService;
     }
 
 /*    public ArrayList<Post> example(){
@@ -61,7 +63,7 @@ public class PostController {
         Post post =new Post(newpost.getTitle(), newpost.getBody());
         post.setOwner(user);
         postDao.save(post);
-
+        emailService.prepareAndSend(post, "your post :"+newpost.getTitle()+" was successful!", "with the body:\n"+newpost.getBody());
         return "redirect:/posts";
     }
 
@@ -80,6 +82,7 @@ public class PostController {
 
         return "redirect:/posts";
     }
+
 
 
 }
