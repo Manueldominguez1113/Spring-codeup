@@ -6,6 +6,16 @@
 </head>
 <body>
 <h1> here is your post</h1>
-<p th:if=""> there is nothing to show!</p>
+<h3>Here are the categories for the ad:</h3>
+<!--<ul>
+    <li th:each="category : ${post.title}" th:text="${post.body}" ></li>
+</ul>-->
+
+
+<h4>Post object to view test -</h4>
+<h1 th:text="${post.title}"></h1>
+<p th:text="${post.body}"></p><br><br>
+<p th:text="${post.getOwner().getEmail()}"></p>
+
 </body>
 </html>
