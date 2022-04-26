@@ -1,4 +1,4 @@
-package com.example.springcodeup;
+package com.example.springcodeup.models;
 
 import javax.persistence.*;
 

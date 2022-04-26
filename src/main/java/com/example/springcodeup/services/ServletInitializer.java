@@ -1,4 +1,4 @@
-package com.example.springcodeup;
+package com.example.springcodeup.services;
 
 import com.example.springcodeup.SpringCodeupApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

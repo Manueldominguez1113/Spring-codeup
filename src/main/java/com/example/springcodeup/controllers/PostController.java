@@ -1,9 +1,9 @@
 package com.example.springcodeup.controllers;
 
-import com.example.springcodeup.Post;
-import com.example.springcodeup.PostRepository;
-import com.example.springcodeup.User;
-import com.example.springcodeup.UserRepository;
+import com.example.springcodeup.models.Post;
+import com.example.springcodeup.repositories.PostRepository;
+import com.example.springcodeup.models.User;
+import com.example.springcodeup.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.example.springcodeup.controllers;
 
-import com.example.springcodeup.Post;
+import com.example.springcodeup.models.Post;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;

@@ -1,4 +1,4 @@
-package com.example.springcodeup;
+package com.example.springcodeup.models;
 
 import javax.persistence.*;
 import java.util.List;
@@ -9,10 +9,12 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 50, unique = true)
     private String username;
-    @Column(nullable = false, length = 50)
+
+    @Column(nullable = false, length = 50,unique = true)
     private String email;
+
     @Column(nullable = false, length = 50)
     private String password;
     @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "owner")
@@ -20,6 +22,13 @@ public class User {
 
 
     public User(){}
+
+        public User(User copy) {
+            id = copy.id; // This line is SUPER important! Many things won't work if it's absent
+            email = copy.email;
+            username = copy.username;
+            password = copy.password;
+        }
 
     public User(String username, String email, String password){
         this.username = username;
