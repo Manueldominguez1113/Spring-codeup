@@ -11,7 +11,7 @@ public class Post {
     private String title;
     @Column(nullable = false, length = 100)
     private String body;
-    @ManyToOne()
+    @ManyToOne(cascade = {CascadeType.DETACH})
     @JoinColumn(name = "user_id")
     private User owner;
     public Post(){}

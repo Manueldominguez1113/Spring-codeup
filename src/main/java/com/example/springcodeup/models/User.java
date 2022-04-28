@@ -15,7 +15,7 @@ public class User {
     @Column(nullable = false, length = 50,unique = true)
     private String email;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false)
     private String password;
     @OneToMany(cascade = {CascadeType.ALL}, mappedBy = "owner")
     private List<Post> posts;
