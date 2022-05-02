@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<!--    bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Poke Fight!</title>
+</head>
+<body>
+<h1>this will become our home page</h1>
+<!-- Home page basic shell V1-->
+<div class="container">
+    <div class="row">
+
+        <div id="myProfile" class="col-4 border-success">
+            <div class="card" style="width: 18rem;">
+<!--                <img src="..." class="card-img-top" alt="...">-->
+                <div class="card-body">
+                    <h5 class="card-title">USER NAME HERE</h5>
+
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Wins/losses </li>
+                    <li class="list-group-item">XP(use a bar here if possible) </li>
+                    <li class="list-group-item">Level</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+
+        </div>
+        <!--card section V1-->
+
+        <div id="myCards" class="col col-4 border border-2">
+            <div class="col">
+
+                CARDS ARE HERE
+                CARDS ARE HERE
+                CARDS ARE HERE
+                CARDS ARE HERE
+            </div>
+
+        </div>
+        <!--        store and pouch section V1-->
+
+        <div class="col border border-2 col">
+            <div id= "items" >
+                <div class="row" id="store">
+                    items for sale go here
+                </div>
+                <div class="row"   id="pouches">
+                    pouches go here
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <!--    place holder battle button-->
+    <div class="row">
+        <div class="mx-auto" style="width: 200px;">
+            <button>Battle Now</button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
