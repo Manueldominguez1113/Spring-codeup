@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import org.springframework.stereotype.Controller;
@@ -33,4 +34,4 @@ public String divide(@PathVariable int num1, @PathVariable int num2) {
     return num1 + " divided by " + num2 + " makes " + (num1 * num2);
 }
 
-}
+}*/

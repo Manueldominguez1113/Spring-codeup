@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import com.example.springcodeup.models.User;
@@ -33,4 +34,4 @@ public class UserController {
         userDao.save(user);
         return "redirect:/login";
     }
-}
+}*/

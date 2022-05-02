@@ -2,6 +2,7 @@ package com.example.springcodeup.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+/*
 
 @Controller
 public class AuthenticationController {
@@ -9,4 +10,4 @@ public class AuthenticationController {
     public String showLoginForm() {
         return "users/login";
     }
-}
+}*/

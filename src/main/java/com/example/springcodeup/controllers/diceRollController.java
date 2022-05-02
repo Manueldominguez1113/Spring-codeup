@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ public class diceRollController {
     return "diceroll";
 }
 
+*/
 /*@GetMapping("/roll-dice/{n}")
 @ResponseBody
 public String guess(@PathVariable int n){
@@ -22,7 +24,8 @@ public String guess(@PathVariable int n){
     return "Correct!! answer was "+ roll;
     }
     return "Wrongo!! answer was "+ roll;
-}*/
+}*//*
+
 // bonus
     @GetMapping("/roll-dice/{n}")
     @ResponseBody
@@ -56,3 +59,4 @@ public String guess(@PathVariable int n){
         return i.toString();
     }
 }
+*/

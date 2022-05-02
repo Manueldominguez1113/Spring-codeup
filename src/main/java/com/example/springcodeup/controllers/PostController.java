@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import com.example.springcodeup.models.Post;
@@ -23,6 +24,7 @@ public class PostController {
         this.emailService = emailService;
     }
 
+*/
 /*    public ArrayList<Post> example(){
         ArrayList<Post> ex = new ArrayList<>();
         Post one =new Post("hello!","First post");
@@ -30,7 +32,8 @@ public class PostController {
         ex.add(one);
         ex.add(two);
         return ex;
-    }*/
+    }*//*
+
 
     @GetMapping("/posts")
     public String posts(Model model){
@@ -86,3 +89,4 @@ public class PostController {
 
 
 }
+*/

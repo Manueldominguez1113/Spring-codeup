@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import org.springframework.stereotype.Controller;
@@ -7,13 +8,15 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloController {
 
-    /*
+    */
+/*
      @GetMapping("/hello/{name}")
     @ResponseBody
     public String hello(@PathVariable String name) {
         return "Hello " + name + " from spring!";
     }
-    */
+    *//*
+
 
     @GetMapping("/hello/{name}")
     public String sayHello(@PathVariable String name, Model model) {
@@ -31,4 +34,4 @@ public class HelloController {
         model.addAttribute("cohort", "Welcome to " + cohort + "!");
         return "join";
     }
-}
+}*/

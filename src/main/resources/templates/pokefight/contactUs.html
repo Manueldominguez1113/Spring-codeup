@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="pokefight/partials/fragments :: header(title='splash')" ></head>
 <body>
+<nav th:replace="pokefight/partials/fragments :: navbar"></nav>
+
 <h1>this will become our form page to contact us</h1>
+
+<div th:include="pokefight/partials/fragments :: footer"></div>
 </body>
 </html>

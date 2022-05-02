@@ -1,4 +1,4 @@
-package com.pokefight.pokefight.controllers;
+package com.example.springcodeup.controllers.pokefightcontrollers;
 
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;

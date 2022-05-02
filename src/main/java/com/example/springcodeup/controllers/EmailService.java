@@ -1,3 +1,4 @@
+/*
 package com.example.springcodeup.controllers;
 
 import com.example.springcodeup.models.Post;
@@ -33,12 +34,14 @@ public class EmailService {
         }
     }
 
-    /*play.mailer {
+play.mailer {
         host = "smtp.mailtrap.io"
         port = 2525
         ssl = no
         tls = yes
         user = "530a5fc3c6da11"
         password = "2674749c6f71a8"
-    }*/
+    }
+
 }
+*/
