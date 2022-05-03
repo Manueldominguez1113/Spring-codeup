@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="pokefight/partials/fragments :: header(title='splash')" ></head>
+<head th:replace="pokefight/partials/fragments :: header(title='Profile')" ></head>
 <body>
 <nav th:replace="pokefight/partials/fragments :: navbar"></nav>
 
 <h1>this will become our profile page</h1>
 
+<div class="box">
+    <form id="pick-form">
+        <div class="field">
+            <div class="control">
+                <button class="button" type="button" id="picker">Pick file</button>
+                <input type="hidden" id="fileupload">
+            </div>
+            <div class="control" id="nameBox"></div>
+            <div class="control" id="urlBox"></div>
+        </div>
+        <div class="field">
+            <div class="control">
+                <input class="button" type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--<iframe width="560" height="315" src="../static/js/Filestack.js" allowfullscreen></iframe>-->
+
+
 <div th:include="pokefight/partials/fragments :: footer"></div>
+<script src="/static/js/jquery-2.x-git.js"></script>
+<script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js" crossorigin="anonymous"></script>
+<script src="/static/js/APIKEY.js"></script>
+<script src="/static/js/Filestack.js"></script>
+
 </body>
 </html>
